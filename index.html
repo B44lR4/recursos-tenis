@@ -15,50 +15,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/favicon.png" type="image/png">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <style>
-    body { background: #fff; }
+ <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<style>
+  body { background: #fff; }
+
   .navbar-tenis {
-  background-color: #e6f2e6; /* Verde muy claro */
-  box-shadow: 0 4px 16px rgba(30,130,76,0.1);
+    background: linear-gradient(90deg, #e6f2e6 0%, #c1e1c1 100%); /* Degradado verde muy claro */
+    box-shadow: 0 4px 16px rgba(30,130,76,0.1);
   }
 
+  /* --- ESTILOS PARA EL LOGO Y SU CONTENEDOR --- */
+  .navbar-brand img {
+    height: 100px; /* Altura del logo, puedes ajustarla más adelante si es necesario */
+    width: auto;  /* Mantiene la proporción del logo */
+  }
+  .navbar-brand {
+    color: #1e824c !important;   /* Verde oscuro para el texto si lo hubiera */
+    text-shadow: none;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  /* --- FIN DE ESTILOS PARA EL LOGO --- */
 
-    /* --- ESTILOS PARA EL LOGO Y SU CONTENEDOR --- */
-    .navbar-brand img {
-      height: 100px; /* Altura del logo, puedes ajustarla más adelante si es necesario */
-      width: auto;  /* Mantiene la proporción del logo */
-    }
-    .navbar-brand {
-      /* Estilos originales para el texto, ahora comentados o ajustados para el logo */
-      /* font-weight: bold; */
-      /* font-size: 2rem; */ /* El tamaño del logo se controla con .navbar-brand img height */
-      /* letter-spacing: 1px; */
-      /* text-shadow: 1px 1px 8px #145a32; */
-      /* color: #fff !important; */ /* El logo es una imagen, no necesita color de texto */
-      padding-top: 0.25rem; /* Pequeños ajustes para centrar mejor el logo si es necesario */
-      padding-bottom: 0.25rem;
-    }
-    /* --- FIN DE ESTILOS PARA EL LOGO --- */
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: #1e824c !important;   /* Verde oscuro, muy legible sobre fondo claro */
+    transition: color 0.2s;
+  }
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:hover {
+    color: #145a32 !important;   /* Un verde aún más oscuro al pasar el ratón */
+    text-shadow: none;           /* Elimina el resplandor amarillo */
+  }
 
-    .navbar-nav .nav-link {
-      font-size: 1.1rem;
-      margin-left: 8px;
-      margin-right: 8px;
-      color: #f8f8e0 !important;
-      transition: color 0.2s;
-    }
-    .navbar-nav .nav-link.active,
-    .navbar-nav .nav-link:hover {
-      color: #fff700 !important;
-      text-shadow: 0 0 6px #1e824c;
-    }
-    h2 { margin-top: 40px; }
-    .text-tenis-green { color: #1e824c; }
-    .bg-tenis-yellow { background: #fffde4; }
-    .bg-tenis-orange { background: #ffe5b4; }
-    .bg-tenis-red { background: #ffb3b3; }
+  h2 { margin-top: 40px; }
+  .text-tenis-green { color: #1e824c; }
+  .bg-tenis-yellow { background: #fffde4; }
+  .bg-tenis-orange { background: #ffe5b4; }
+  .bg-tenis-red { background: #ffb3b3; }
+
   .img-card-container {
     width: 100%;
     aspect-ratio: 3 / 4; /* Proporción para las imágenes de las tarjetas, puedes ajustar si quieres */
@@ -81,8 +79,8 @@
     max-width: 600px; /* Ancho máximo de las tarjetas */
     margin: 0 auto 1rem auto;
   }
+</style>
 
-  </style>
 </head>
 <body>
   <!-- Navbar -->
