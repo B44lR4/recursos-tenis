@@ -177,36 +177,66 @@
     </div>
   </div>
 
-<!-- Ranking ATP y WTA en la misma línea (Top 100 auto-actualizado) -->
 <div class="container my-5" id="ranking">
-  <h2 class="mb-4" style="color:#c0392b;">Ranking ATP / WTA (Top 100)</h2>
+  <h2 class="mb-4" style="color:#c0392b;">Ranking ATP / WTA (Top 100 en vivo)</h2>
   <div class="row">
-    <!-- Widget Ranking ATP Top 100 -->
+    <!-- Widget ATP Top 100 en vivo -->
     <div class="col-md-6 mb-4">
       <div class="card h-100 border-danger bg-tenis-red">
         <div class="card-body">
-          <h5 class="card-title">Ranking ATP Top 100</h5>
-          <iframe src="https://widgets.predict.tennis/atp-official-top100"
-                  style="width:100%; min-height:900px; border:none;"
-                  loading="lazy"
-                  title="Ranking ATP Top 100"></iframe>
+          <h5 class="card-title">Ranking ATP Top 100 (Live)</h5>
+          <div id="widget-atp-live" style="max-width:600px; width:100%;">
+            <iframe id="widget-atp-live-iframe" src="https://predict.tennis/embed/rankings?org=atp&rankingType=live&limit=100&showName=true&showCountryImg=true&showCurrentRank=true&showPoints=true&showTournamentsPlayed=true&showBestRank=true&showNextWinPoints=true&showMaxPoints=true&showTotalAces=true&showTitles=true&showTotalDF=true&showRank=true&showHeader=true&bgColor=%23ffffff&textColor=%23000000&headerBgColor=%23464e5c&headerTextColor=%23ffffff&font=default&textSize=14px&inst=widget-atp-live" style="width:100%; border:none; transition:all 300ms ease;" allowfullscreen></iframe>
+            <script>
+              (function() {
+                function onMessage(event) {
+                  if(event.data && event.data.iframeHeight && event.data.inst === "widget-atp-live") {
+                    var container = document.querySelector("#widget-atp-live iframe");
+                    if(container) {
+                      container.style.height = event.data.iframeHeight + "px";
+                    }
+                  }
+                }
+                window.addEventListener("message", onMessage, false);
+              })();
+            </script>
+          </div>
+          <div style="margin-top: 0.25rem; font-size: 0.875rem; text-align: left; color: #333; background: transparent;">
+            Widget by <a href="https://predict.tennis" target="_blank" rel="noopener">Predict.Tennis</a>
+          </div>
         </div>
       </div>
     </div>
-    <!-- Widget Ranking WTA Top 100 -->
+    <!-- Widget WTA Top 100 en vivo -->
     <div class="col-md-6 mb-4">
       <div class="card h-100 border-danger bg-tenis-red">
         <div class="card-body">
-          <h5 class="card-title">Ranking WTA Top 100</h5>
-          <iframe src="https://widgets.predict.tennis/wta-official-top100"
-                  style="width:100%; min-height:900px; border:none;"
-                  loading="lazy"
-                  title="Ranking WTA Top 100"></iframe>
+          <h5 class="card-title">Ranking WTA Top 100 (Live)</h5>
+          <div id="widget-wta-live" style="max-width:600px; width:100%;">
+            <iframe id="widget-wta-live-iframe" src="https://predict.tennis/embed/rankings?org=wta&rankingType=live&limit=100&showName=true&showCountryImg=true&showCurrentRank=true&showPoints=true&showTournamentsPlayed=true&showBestRank=true&showNextWinPoints=true&showMaxPoints=true&showTotalAces=true&showTitles=true&showTotalDF=true&showRank=true&showHeader=true&bgColor=%23ffffff&textColor=%23000000&headerBgColor=%23464e5c&headerTextColor=%23ffffff&font=default&textSize=14px&inst=widget-wta-live" style="width:100%; border:none; transition:all 300ms ease;" allowfullscreen></iframe>
+            <script>
+              (function() {
+                function onMessage(event) {
+                  if(event.data && event.data.iframeHeight && event.data.inst === "widget-wta-live") {
+                    var container = document.querySelector("#widget-wta-live iframe");
+                    if(container) {
+                      container.style.height = event.data.iframeHeight + "px";
+                    }
+                  }
+                }
+                window.addEventListener("message", onMessage, false);
+              })();
+            </script>
+          </div>
+          <div style="margin-top: 0.25rem; font-size: 0.875rem; text-align: left; color: #333; background: transparent;">
+            Widget by <a href="https://predict.tennis" target="_blank" rel="noopener">Predict.Tennis</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
   <!-- Recursos para aficionados -->
