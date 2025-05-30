@@ -20,13 +20,24 @@
       background: linear-gradient(90deg, #1e824c 0%, #27ae60 100%);
       box-shadow: 0 4px 16px rgba(30,130,76,0.15);
     }
-    .navbar-brand {
-      font-weight: bold;
-      font-size: 2rem;
-      letter-spacing: 1px;
-      text-shadow: 1px 1px 8px #145a32;
-      color: #fff !important;
+
+    /* --- ESTILOS PARA EL LOGO Y SU CONTENEDOR --- */
+    .navbar-brand img {
+      height: 45px; /* Altura del logo, puedes ajustarla más adelante si es necesario */
+      width: auto;  /* Mantiene la proporción del logo */
     }
+    .navbar-brand {
+      /* Estilos originales para el texto, ahora comentados o ajustados para el logo */
+      /* font-weight: bold; */
+      /* font-size: 2rem; */ /* El tamaño del logo se controla con .navbar-brand img height */
+      /* letter-spacing: 1px; */
+      /* text-shadow: 1px 1px 8px #145a32; */
+      /* color: #fff !important; */ /* El logo es una imagen, no necesita color de texto */
+      padding-top: 0.25rem; /* Pequeños ajustes para centrar mejor el logo si es necesario */
+      padding-bottom: 0.25rem;
+    }
+    /* --- FIN DE ESTILOS PARA EL LOGO --- */
+
     .navbar-nav .nav-link {
       font-size: 1.1rem;
       margin-left: 8px;
@@ -46,8 +57,8 @@
     .bg-tenis-red { background: #ffb3b3; }
   .img-card-container {
     width: 100%;
-    aspect-ratio: 3 / 4;
-    max-height: 680px;
+    aspect-ratio: 4 / 3; /* Proporción para las imágenes de las tarjetas, puedes ajustar si quieres */
+    max-height: 280px;   /* Altura máxima para las imágenes de las tarjetas */
     background: #eee;
     display: flex;
     align-items: center;
@@ -63,7 +74,7 @@
     display: block;
   }
   .card {
-    max-width: 1000px;
+    max-width: 600px; /* Ancho máximo de las tarjetas */
     margin: 0 auto 1rem auto;
   }
 
@@ -74,8 +85,7 @@
   <nav class="navbar navbar-expand-lg navbar-tenis sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <!-- Puedes poner aquí un logo: <img src="img/logo.png" alt="Logo" style="height:40px;vertical-align:middle;margin-right:10px;"> -->
-        TenisData.net
+        <img src="img/logo.png" alt="TenisData.net Logo"> <!-- AQUÍ ESTÁ TU LOGO -->
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -165,46 +175,46 @@
     </div>
   </div>
 
-<!-- Ranking ATP y WTA en la misma línea -->
-<div class="container my-5" id="ranking">
-  <h2 class="mb-4" style="color:#c0392b;">Ranking ATP / WTA</h2>
-  <div class="row">
-    <div class="col-md-6 mb-4">
-      <div class="card h-100 border-danger bg-tenis-red">
-        <div class="img-card-container">
-          <img src="img/ranking-atp.jpg" alt="Ranking ATP">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Ranking ATP</h5>
-          <p class="card-text">Consulta el ranking actualizado de los mejores jugadores del circuito ATP.</p>
-          <a href="https://www.atptour.com/es/rankings/singles" target="_blank" class="btn btn-danger">Ver ranking ATP</a>
+  <!-- Ranking ATP y WTA en la misma línea -->
+  <div class="container my-5" id="ranking">
+    <h2 class="mb-4" style="color:#c0392b;">Ranking ATP / WTA</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 border-danger bg-tenis-red">
+          <div class="img-card-container">
+            <img src="img/ranking-atp.jpg" alt="Ranking ATP"> <!-- Asegúrate que esta imagen se llama así o .JPG -->
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Ranking ATP</h5>
+            <p class="card-text">Consulta el ranking actualizado de los mejores jugadores del circuito ATP.</p>
+            <a href="https://www.atptour.com/es/rankings/singles" target="_blank" class="btn btn-danger">Ver ranking ATP</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card h-100 border-danger bg-tenis-red">
-        <div class="img-card-container">
-          <img src="img/ranking-wta.jpg" alt="Ranking WTA">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Ranking WTA</h5>
-          <p class="card-text">Revisa el ranking oficial de la WTA y sigue la evolución de las mejores tenistas.</p>
-          <a href="https://www.wtatennis.com/rankings" target="_blank" class="btn btn-outline-danger">Ver ranking WTA</a>
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 border-danger bg-tenis-red">
+          <div class="img-card-container">
+            <img src="img/ranking-wta.jpg" alt="Ranking WTA"> <!-- Asegúrate que esta imagen se llama así o .JPG -->
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Ranking WTA</h5>
+            <p class="card-text">Revisa el ranking oficial de la WTA y sigue la evolución de las mejores tenistas.</p>
+            <a href="https://www.wtatennis.com/rankings" target="_blank" class="btn btn-outline-danger">Ver ranking WTA</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
   <!-- Recursos para aficionados -->
   <div class="container my-5" id="aficionados">
     <h2 class="mb-4 text-success">Recursos para Aficionados</h2>
     <div class="row">
-      <div class="col-md-12 mb-4">
+      <div class="col-md-12 mb-4"> <!-- Si quieres dos tarjetas aquí, cambia a col-md-6 y añade otra tarjeta -->
         <div class="card h-100 border-success bg-tenis-yellow">
           <div class="img-card-container">
-            <img src="img/analisis.jpg" alt="Análisis">
+            <img src="img/analisis.jpg" alt="Análisis"> <!-- Asegúrate que esta imagen se llama así o .JPG -->
           </div>
           <div class="card-body">
             <h5 class="card-title">Análisis y opinión</h5>
@@ -223,7 +233,7 @@
       <div class="col-md-6 mb-4">
         <div class="card h-100 border-warning bg-tenis-orange">
           <div class="img-card-container">
-            <img src="img/pronosticos.jpg" alt="Pronósticos">
+            <img src="img/pronosticos.jpg" alt="Pronósticos"> <!-- Asegúrate que esta imagen se llama así o .JPG -->
           </div>
           <div class="card-body">
             <h5 class="card-title">Pronósticos de Hoy</h5>
@@ -235,12 +245,12 @@
       <div class="col-md-6 mb-4">
         <div class="card h-100 border-warning bg-tenis-orange">
           <div class="img-card-container">
-            <img src="img/cuotas.jpg" alt="Cuotas">
+            <img src="img/cuotas.jpg" alt="Cuotas"> <!-- Asegúrate que esta imagen se llama así o .JPG -->
           </div>
           <div class="card-body">
             <h5 class="card-title">Comparador de Cuotas</h5>
             <p class="card-text">Consulta las mejores cuotas en tiempo real de las principales casas de apuestas.</p>
-            <a href="https://oddspedia.com/es/tenis" target="_blank" class="btn btn-outline-warning">Comparar cuotas</a>
+            <a href="https://www.apuestasdeportivas.com/tenis/" target="_blank" class="btn btn-outline-warning">Comparar cuotas</a>
           </div>
         </div>
       </div>
