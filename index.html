@@ -2,14 +2,13 @@
 <html lang="es">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V95YWKEK2W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V95YWKEK2W');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V95YWKEK2W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V95YWKEK2W');
+  </script>
   <meta charset="UTF-8">
   <title>TenisData.net - Todo sobre tenis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,11 +18,27 @@
     body { background: #f8f8e0; }
     .navbar-brand { font-weight: bold; }
     h2 { margin-top: 40px; }
-    .card-img-top { height: 180px; object-fit: cover; }
     .text-tenis-green { color: #1e824c; }
     .bg-tenis-yellow { background: #fffde4; }
     .bg-tenis-orange { background: #ffe5b4; }
     .bg-tenis-red { background: #ffb3b3; }
+    .img-card-container {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-top-left-radius: 0.375rem;
+      border-top-right-radius: 0.375rem;
+    }
+    .img-card-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -65,7 +80,9 @@
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-primary">
-          <img src="img/noticias.jpg" class="card-img-top" alt="Noticias de tenis">
+          <div class="img-card-container">
+            <img src="img/noticias.jpg" alt="Noticias de tenis">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Últimas Noticias</h5>
             <p class="card-text">Mantente al día con las novedades del mundo del tenis: torneos, fichajes y más.</p>
@@ -75,7 +92,9 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-primary">
-          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Resultados en vivo">
+          <div class="img-card-container">
+            <img src="img/resultados.jpg" alt="Resultados en vivo">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Resultados en Vivo</h5>
             <p class="card-text">Consulta los marcadores de los partidos en tiempo real y sigue a tus jugadores favoritos.</p>
@@ -85,7 +104,9 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-primary">
-          <img src="img/sinner1.webp" class="card-img-top" alt="Ranking">
+          <div class="img-card-container">
+            <img src="img/ranking.jpg" alt="Ranking">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Ranking Mundial</h5>
             <p class="card-text">Revisa los últimos movimientos en el ranking ATP y WTA.</p>
@@ -102,7 +123,9 @@
     <div class="row">
       <div class="col-md-6 mb-4">
         <div class="card h-100 border-warning bg-tenis-orange">
-          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b41?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Calendario ATP">
+          <div class="img-card-container">
+            <img src="img/calendario-atp.jpg" alt="Calendario ATP">
+          </div>
           <div class="card-body">
             <h5 class="card-title">ATP 2025</h5>
             <p class="card-text">Consulta el calendario completo de torneos ATP 2025, fechas y sedes.</p>
@@ -112,7 +135,9 @@
       </div>
       <div class="col-md-6 mb-4">
         <div class="card h-100 border-warning bg-tenis-orange">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Calendario WTA">
+          <div class="img-card-container">
+            <img src="img/calendario-wta.jpg" alt="Calendario WTA">
+          </div>
           <div class="card-body">
             <h5 class="card-title">WTA 2025</h5>
             <p class="card-text">Descubre el calendario oficial de torneos WTA 2025 y sigue a las mejores jugadoras del mundo.</p>
@@ -129,7 +154,9 @@
     <div class="row">
       <div class="col-md-6 mb-4">
         <div class="card h-100 border-danger bg-tenis-red">
-          <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Ranking ATP">
+          <div class="img-card-container">
+            <img src="img/ranking-atp.jpg" alt="Ranking ATP">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Ranking ATP</h5>
             <p class="card-text">Consulta el ranking actualizado de los mejores jugadores del circuito ATP.</p>
@@ -139,7 +166,9 @@
       </div>
       <div class="col-md-6 mb-4">
         <div class="card h-100 border-danger bg-tenis-red">
-          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b41?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Ranking WTA">
+          <div class="img-card-container">
+            <img src="img/ranking-wta.jpg" alt="Ranking WTA">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Ranking WTA</h5>
             <p class="card-text">Revisa el ranking oficial de la WTA y sigue la evolución de las mejores tenistas.</p>
@@ -156,7 +185,9 @@
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-success bg-tenis-yellow">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Aficionados">
+          <div class="img-card-container">
+            <img src="img/apps.jpg" alt="Aficionados">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Apps recomendadas</h5>
             <p class="card-text">Sigue los partidos y estadísticas desde tu móvil con las mejores apps de tenis.</p>
@@ -166,7 +197,9 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-success bg-tenis-yellow">
-          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Análisis">
+          <div class="img-card-container">
+            <img src="img/analisis.jpg" alt="Análisis">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Análisis y opinión</h5>
             <p class="card-text">Lee artículos y reportajes sobre técnica, táctica y actualidad del tenis.</p>
@@ -176,7 +209,9 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-success bg-tenis-yellow">
-          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Comunidad aficionada">
+          <div class="img-card-container">
+            <img src="img/comunidad.jpg" alt="Comunidad aficionada">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Comunidad de fans</h5>
             <p class="card-text">Comparte tus experiencias y opiniones con otros aficionados al tenis.</p>
@@ -193,7 +228,9 @@
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-success bg-tenis-yellow">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Club de tenis">
+          <div class="img-card-container">
+            <img src="img/club.jpg" alt="Club de tenis">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Club Tenis Central</h5>
             <p class="card-text">Uno de los clubes más activos de la ciudad, con torneos semanales y escuela para todas las edades.</p>
@@ -203,7 +240,9 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-success bg-tenis-yellow">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Gestión de clubes">
+          <div class="img-card-container">
+            <img src="img/gestion.jpg" alt="Gestión de clubes">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Gestión de Clubes</h5>
             <p class="card-text">Recomendamos <a href="https://clupik.com/" target="_blank">Clupik</a> para la gestión integral de inscripciones, pagos y comunicación.</p>
@@ -213,7 +252,9 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-success bg-tenis-yellow">
-          <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Entrenadores">
+          <div class="img-card-container">
+            <img src="img/entrenadores.jpg" alt="Entrenadores">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Recursos para Entrenadores</h5>
             <p class="card-text">Descubre apps y plataformas para planificar entrenamientos y analizar partidos.</p>
@@ -230,7 +271,9 @@
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-warning bg-tenis-orange">
-          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Pronósticos">
+          <div class="img-card-container">
+            <img src="img/pronosticos.jpg" alt="Pronósticos">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Pronósticos de Hoy</h5>
             <p class="card-text">Análisis y predicciones para los partidos más importantes de la jornada.</p>
@@ -240,7 +283,9 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-warning bg-tenis-orange">
-          <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Cuotas">
+          <div class="img-card-container">
+            <img src="img/cuotas.jpg" alt="Cuotas">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Comparador de Cuotas</h5>
             <p class="card-text">Consulta las mejores cuotas en tiempo real de las principales casas de apuestas.</p>
@@ -250,7 +295,9 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100 border-warning bg-tenis-orange">
-          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Juego responsable">
+          <div class="img-card-container">
+            <img src="img/juego-responsable.jpg" alt="Juego responsable">
+          </div>
           <div class="card-body">
             <h5 class="card-title">Juego Responsable</h5>
             <p class="card-text">Consejos y recursos para apostar de forma segura y consciente.</p>
@@ -261,7 +308,17 @@
     </div>
   </div>
 
- 
+  <!-- Contacto -->
+  <div class="container my-5" id="contacto">
+    <h2 class="mb-4 text-dark">Contacto</h2>
+    <div class="card border-dark">
+      <div class="card-body">
+        <h5 class="card-title">¿Tienes sugerencias o quieres colaborar?</h5>
+        <p class="card-text">Escríbenos a <a href="mailto:info@tenisdata.net">info@tenisdata.net</a> o usa nuestro formulario de contacto.</p>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3 mt-5">
     &copy; 2025 TenisData.net - Todos los derechos reservados
@@ -271,5 +328,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
