@@ -54,10 +54,10 @@
           <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="#noticias">Noticias y resultados</a></li>
           <li class="nav-item"><a class="nav-link" href="#calendario">Calendario de torneos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#ranking">Ranking ATP/WTA</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ranking-atp">Ranking ATP</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ranking-wta">Ranking WTA</a></li>
           <li class="nav-item"><a class="nav-link" href="#aficionados">Aficionados</a></li>
           <li class="nav-item"><a class="nav-link" href="#apuestas">Apuestas</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -77,7 +77,7 @@
   <div class="container my-5" id="noticias">
     <h2 class="mb-4 text-primary">Noticias y Resultados en Vivo</h2>
     <div class="row">
-      <div class="col-md-4 mb-4">
+      <div class="col-md-6 mb-4">
         <div class="card h-100 border-primary">
           <div class="img-card-container">
             <img src="img/noticias.jpg" alt="Noticias de tenis">
@@ -89,7 +89,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-6 mb-4">
         <div class="card h-100 border-primary">
           <div class="img-card-container">
             <img src="img/resultados.jpg" alt="Resultados en vivo">
@@ -98,18 +98,6 @@
             <h5 class="card-title">Resultados en Vivo</h5>
             <p class="card-text">Consulta los marcadores de los partidos en tiempo real y sigue a tus jugadores favoritos.</p>
             <a href="https://sofascore.com/es/tenis" target="_blank" class="btn btn-outline-primary">Ver resultados</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-primary">
-          <div class="img-card-container">
-            <img src="img/ranking.jpg" alt="Ranking">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Ranking Mundial</h5>
-            <p class="card-text">Revisa los últimos movimientos en el ranking ATP y WTA.</p>
-            <a href="#ranking" class="btn btn-primary">Ver ranking</a>
           </div>
         </div>
       </div>
@@ -147,11 +135,11 @@
     </div>
   </div>
 
-  <!-- Ranking ATP/WTA -->
-  <div class="container my-5" id="ranking">
-    <h2 class="mb-4" style="color:#c0392b;">Ranking ATP / WTA</h2>
+  <!-- Ranking ATP -->
+  <div class="container my-5" id="ranking-atp">
+    <h2 class="mb-4" style="color:#c0392b;">Ranking ATP</h2>
     <div class="row">
-      <div class="col-md-6 mb-4">
+      <div class="col-md-12 mb-4">
         <div class="card h-100 border-danger bg-tenis-red">
           <div class="img-card-container">
             <img src="img/ranking-atp.jpg" alt="Ranking ATP">
@@ -163,7 +151,14 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 mb-4">
+    </div>
+  </div>
+
+  <!-- Ranking WTA -->
+  <div class="container my-5" id="ranking-wta">
+    <h2 class="mb-4" style="color:#c0392b;">Ranking WTA</h2>
+    <div class="row">
+      <div class="col-md-12 mb-4">
         <div class="card h-100 border-danger bg-tenis-red">
           <div class="img-card-container">
             <img src="img/ranking-wta.jpg" alt="Ranking WTA">
@@ -182,7 +177,7 @@
   <div class="container my-5" id="aficionados">
     <h2 class="mb-4 text-success">Recursos para Aficionados</h2>
     <div class="row">
-      <div class="col-md-4 mb-4">
+      <div class="col-md-6 mb-4">
         <div class="card h-100 border-success bg-tenis-yellow">
           <div class="img-card-container">
             <img src="img/apps.jpg" alt="Aficionados">
@@ -194,7 +189,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-6 mb-4">
         <div class="card h-100 border-success bg-tenis-yellow">
           <div class="img-card-container">
             <img src="img/analisis.jpg" alt="Análisis">
@@ -206,18 +201,6 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-success bg-tenis-yellow">
-          <div class="img-card-container">
-            <img src="img/comunidad.jpg" alt="Comunidad aficionada">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Comunidad de fans</h5>
-            <p class="card-text">Comparte tus experiencias y opiniones con otros aficionados al tenis.</p>
-            <a href="#aficionados" class="btn btn-success">Unirse a la comunidad</a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -225,7 +208,7 @@
   <div class="container my-5" id="apuestas">
     <h2 class="mb-4" style="color:#f7ca18;">Apuestas y Pronósticos</h2>
     <div class="row">
-      <div class="col-md-4 mb-4">
+      <div class="col-md-6 mb-4">
         <div class="card h-100 border-warning bg-tenis-orange">
           <div class="img-card-container">
             <img src="img/pronosticos.jpg" alt="Pronósticos">
@@ -237,7 +220,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-6 mb-4">
         <div class="card h-100 border-warning bg-tenis-orange">
           <div class="img-card-container">
             <img src="img/cuotas.jpg" alt="Cuotas">
@@ -248,29 +231,6 @@
             <a href="https://oddspedia.com/es/tenis" target="_blank" class="btn btn-outline-warning">Comparar cuotas</a>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-warning bg-tenis-orange">
-          <div class="img-card-container">
-            <img src="img/juego-responsable.jpg" alt="Juego responsable">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Juego Responsable</h5>
-            <p class="card-text">Consejos y recursos para apostar de forma segura y consciente.</p>
-            <a href="#" class="btn btn-warning">Saber más</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Contacto -->
-  <div class="container my-5" id="contacto">
-    <h2 class="mb-4 text-dark">Contacto</h2>
-    <div class="card border-dark">
-      <div class="card-body">
-        <h5 class="card-title">¿Tienes sugerencias o quieres colaborar?</h5>
-        <p class="card-text">Escríbenos a <a href="mailto:info@tenisdata.net">info@tenisdata.net</a> o usa nuestro formulario de contacto.</p>
       </div>
     </div>
   </div>
